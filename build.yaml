@@ -12,3 +12,5 @@
 #     shield: reviung41
 #
 ---
+board: [ "nice_nano_v2" ]
+shield: [ "nine_left", "nine_right" ]
