@@ -1,6 +1,6 @@
 name: Build firmware
 
-on:
+on: [push, pull_request, workflow_dispatch]
   workflow_call:
     inputs:
       build_matrix_path:
