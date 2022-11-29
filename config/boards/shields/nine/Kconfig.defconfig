@@ -1,34 +1,17 @@
-# Copyright (c) 2020 The ZMK Contributors
+# Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
-
-config ZMK_BLE
-	default y
-
-config ZMK_USB
-	default y
-
-if SHIELD_NINE_LEFT || SHIELD_NINE_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "Nine keyboard"
-
-endif
-
-if SHIELD_NINE_RIGHT
-
-config ZMK_SPLIT
-	default y
-
-endif
-
-
 
 if SHIELD_NINE_LEFT
 
+config ZMK_KEYBOARD_NAME
+    default "Nine"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_NINE_LEFT || SHIELD_NINE_RIGHT
 config ZMK_SPLIT
-	default y
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
+    default y
 endif

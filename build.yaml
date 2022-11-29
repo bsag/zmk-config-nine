@@ -12,5 +12,10 @@
 #     shield: reviung41
 #
 ---
-board: [ "nice_nano_v2" ]
-shield: [ "nine_left", "nine_right" ]
+include:
+  - board: nice_nano_v2
+    shield: nine_left nice_view_adapter  nice_view
+  - board: nice_nano_v2
+    shield: nine_right nice_view_adapter nice_view
+  - board: nice_nano_v2
+    shield: settings_reset

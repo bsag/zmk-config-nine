@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "piano.dtsi"
+#include "nine.dtsi"
 
 &default_transform {
 	col-offset = <9>;

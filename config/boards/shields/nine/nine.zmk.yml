@@ -1,0 +1,11 @@
+file_format: "1"
+id: nine
+name: nine
+type: shield
+url: https://github.com/bsag/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - nine_left
+  - nine_right
