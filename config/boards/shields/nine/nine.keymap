@@ -154,6 +154,7 @@
                 compatible = "zmk,keymap";
                 
                 alpha1 {
+                label = "Base";
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
             &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l SYS T                 &hl_r SYS N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
@@ -161,6 +162,7 @@
         >;
         };
                 alpha2 {
+                label = "Al2";
         bindings = <
                     &kp V       &kp W               &kp M           &kp F       &kp SQT             &kp Z
         &kp Q       &kp J       &kp P               &kp K           &kp B       &kp DOT             &kp X       &kp Y
@@ -169,6 +171,7 @@
         };
 
                 sym1 {
+                label = "Code";
         bindings = <
                     &kp STAR    &kp LS(N3)  &kp DLLR                       &kp LS(COMMA)   &kp LS(DOT)     &kp MINUS
         &kp BSLH   &kp GRAVE    &kp TILDE   &kp CARET                      &kp LBKT        &kp RBKT        &kp PIPE    &kp SLASH
@@ -176,6 +179,7 @@
         >;
         };
         sym2 {
+        label = "Punct";
         bindings = <
                     &kp ATSN    &kp QMARK        &kp LA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
         &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
@@ -185,6 +189,7 @@
         };
 
         num {
+        label = "Num";
         bindings = <
                           &hm_l LCTL DOT      &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
         &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &kp EQUAL
@@ -193,6 +198,7 @@
         };
 
         sys {
+        label = "Nav";
         bindings = <
                             &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &kp BKSP
         &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &td LG(S) LEFT      &td PG_DN DOWN  &kp RIGHT   &kp RET
@@ -201,6 +207,7 @@
         };
 
         bt {
+        label = "BT";
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
         &trans    &reset          &trans        &bootloader            &bootloader      &trans         &reset  &bt BT_CLR
@@ -208,6 +215,7 @@
         >;
         };
         fun {
+        label = "Fn";
             bindings = <
                      &kp F11   &kp F10   &kp F1           &kp F2   &kp F3   &kp F4
      &kp C_VOL_DN    &kp F12   &kp F5    &kp F6           &kp F7   &kp F8   &kp F9  &kp C_VOL_UP
@@ -215,6 +223,7 @@
                 >;
         };
                 alpha2cap {
+                label = "Al2Caps";
         bindings = <
                     &kp LS(V)   &kp LS(W)   &kp LS(M)           &kp LS(F)   &kp DQT      &kp LS(Z)
         &kp LS(Q)   &kp LS(J)   &kp LS(P)   &kp LS(K)           &kp LS(B)   &kp COMMA    &kp LS(X)   &kp LS(Y)
