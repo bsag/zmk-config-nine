@@ -1,6 +1,6 @@
 file_format: "1"
-id: nine
-name: nine
+id: nine-no-screens
+name: nine-no-screens
 type: shield
 url: https://github.com/bsag/
 requires: [pro_micro]

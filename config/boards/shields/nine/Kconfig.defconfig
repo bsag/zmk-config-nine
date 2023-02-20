@@ -4,7 +4,7 @@
 if SHIELD_NINE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Nine"
+    default "Nine No Screens"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
