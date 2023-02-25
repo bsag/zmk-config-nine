@@ -26,7 +26,6 @@
 #define SYS 5
 #define BT 6
 #define FUN 7
-#define AL2U 8
 / { 
     combos {
         compatible = "zmk,combos";
@@ -119,15 +118,22 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    shrep: shift_repeat {
+    mehrep: meh_rep {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_REPEAT";
+            label = "MEH_REP";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&key_repeat>;
         };
+    dotcom: dotcom {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DOTCOM";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp DQT>;
+        mods = <(MOD_LSFT)>;
+    };
     alpha2macro: behavior_macro_1 {
         compatible = "zmk,behavior-macro";
         label = "MACRO1";
@@ -152,15 +158,15 @@
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
             &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l SYS T                 &hl_r SYS N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
-                                &mt LC(LS(LALT)) SPC        &shrep LSHIFT 0             &mo AL2U     &mo AL2
+                                             &kp SPC        &sk LSHIFT                  &mehrep LC(LS(LALT)) 0  &mo AL2
         >;
         };
                 alpha2 {
                 label = "Al2";
         bindings = <
-                    &kp V       &kp W               &kp M           &kp F       &kp SQT             &kp Z
-        &kp Q       &kp J       &kp P               &kp K           &kp B       &kp DOT             &kp X       &kp Y
-                                &sr LSHIFT AL1      &none           &none       &sl AL2U
+                    &kp V       &kp W               &kp M               &kp F       &kp SQT             &kp Z
+        &kp Q       &kp J       &kp P               &kp K               &kp B       &kp DOT             &kp X       &kp Y
+                                &kp SPC             &sr LSHIFT AL1      &trans      &none
         >;
         };
 
@@ -169,7 +175,7 @@
         bindings = <
                     &kp STAR    &kp LS(N3)  &kp DLLR                       &kp LS(COMMA)   &kp LS(DOT)     &kp MINUS
         &kp BSLH   &kp GRAVE    &kp TILDE   &kp CARET                      &kp LBKT        &kp RBKT        &kp PIPE    &kp SLASH
-                                &trans      &trans                         &trans      &trans
+                                &trans      &sr LSHIFT AL1                 &kp LALT        &kp RGUI
         >;
         };
         sym2 {
@@ -177,7 +183,7 @@
         bindings = <
                     &kp ATSN    &kp QMARK        &kp LA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
         &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
-                                &trans          &trans                     &trans      &trans
+                                &trans          &sr LSHIFT AL1             &kp LALT    &kp RGUI
 
         >;
         };
@@ -186,8 +192,8 @@
         label = "Num";
         bindings = <
                           &hm_l LCTL DOT      &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
-        &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &kp EQUAL
-                                              &sr LSHIFT AL1  &trans              &trans          &kp RGUI
+        &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &td COLON EQUAL
+                                              &trans          &sr LSHIFT AL1      &kp LALT        &kp RGUI
         >;
         };
 
@@ -195,8 +201,8 @@
         label = "Nav";
         bindings = <
                             &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &kp BKSP
-        &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &td LG(S) LEFT      &td PG_DN DOWN  &kp RIGHT   &kp RET
-                                           &sr LSHIFT AL1      &kp LALT                 &kp LSHIFT          &kp RGUI
+        &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &td LG(Z) RET
+                                           &kp LCTL            &sr LSHIFT AL1           &kp LALT            &kp RGUI
         >;
         };
 
@@ -205,7 +211,7 @@
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
         &trans    &reset          &trans        &bootloader            &bootloader      &trans         &reset  &bt BT_CLR
-                                  &to AL1       &none                  &none     &none
+                                  &none         &to AL1                &none     &none
         >;
         };
         fun {
@@ -213,17 +219,8 @@
             bindings = <
                      &kp F11   &kp F10   &kp F1           &kp F2   &kp F3   &kp F4
      &kp C_VOL_DN    &kp F12   &kp F5    &kp F6           &kp F7   &kp F8   &kp F9  &kp C_VOL_UP
-                               &to AL1   &none            &none    &kp C_MUTE
+                               &none     &to AL1          &none    &kp C_MUTE
                 >;
         };
-                alpha2cap {
-                label = "Al2Caps";
-        bindings = <
-                    &kp LS(V)   &kp LS(W)   &kp LS(M)           &kp LS(F)   &kp DQT      &kp LS(Z)
-        &kp LS(Q)   &kp LS(J)   &kp LS(P)   &kp LS(K)           &kp LS(B)   &kp COMMA    &kp LS(X)   &kp LS(Y)
-                                &to AL1    &trans            &trans  &none
-        >;
-        };
-        
     };
 };
