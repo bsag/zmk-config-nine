@@ -32,12 +32,12 @@
         compatible = "zmk,combos";
         combo_sys {
             timeout-ms = <30>;
-        key-positions = <3 4 5>;
+            key-positions = <3 4 5>;
             bindings = <&to SYS>;
         };
         combo_caps {
             timeout-ms = <30>;
-        key-positions = <10 11 12>;
+            key-positions = <10 11 12>;
             bindings = <&caps_word>;
         };
         combo_num {
@@ -49,19 +49,13 @@
             timeout-ms = <10>;
             key-positions = <11 12>;
             bindings = <&to BT>;
-        layers = <SM1>;
+            layers = <SM1>;
         };
         combo_fun  {
             timeout-ms = <10>;
             key-positions = <7 8>;
             bindings = <&to FUN>;
-        layers = <AL1>;
-        };
-        lalt {
-            timeout-ms = <20>;
-        key-positions = <8 9>;
-            bindings = <&kp LALT>; 
-        layers = <SYS>;
+            layers = <AL1>;
         };
     };
 
@@ -74,7 +68,7 @@
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+            hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
