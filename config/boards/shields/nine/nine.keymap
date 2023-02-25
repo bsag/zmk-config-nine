@@ -134,19 +134,7 @@
         bindings = <&kp DOT>, <&kp DQT>;
         mods = <(MOD_LSFT)>;
     };
-    alpha2macro: behavior_macro_1 {
-        compatible = "zmk,behavior-macro";
-        label = "MACRO1";
-        #binding-cells = <0>;
-        bindings = < &sl AL2 >;
-    };
-    caps_alpha2macro: behavior_macro_2 {
-        compatible = "zmk,behavior-macro";
-        label = "MACRO2";
-        #binding-cells = <0>;
-        bindings = < &sl AL2U >;
-    };
-    };
+  };
 //                  0       1       2                   3       4           5
 //          6       7       8       9                   10      11          12          13
 //                          14      15                  16      17
