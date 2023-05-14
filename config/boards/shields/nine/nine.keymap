@@ -182,7 +182,7 @@
         label = "BT";
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
-        &trans    &reset          &trans        &bootloader            &bootloader      &trans         &reset  &bt BT_CLR
+        &trans    &sys_reset          &trans        &bootloader            &bootloader      &trans         &sys_reset  &bt BT_CLR
                                   &none         &to AL1                &none     &none
         >;
         };
