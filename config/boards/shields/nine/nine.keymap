@@ -153,7 +153,7 @@
         sym2 {
         label = "Punct";
         bindings = <
-                    &kp ATSN    &kp QMARK        &kp LA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
+                    &kp ATSN    &kp QMARK        &kp RA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
         &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
                                 &trans          &sr LSHIFT AL1             &kp LALT    &kp RGUI
 
@@ -174,7 +174,7 @@
         bindings = <
                             &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &kp BKSP
         &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
-                                           &kp LCTL            &sr LSHIFT AL1           &kp LALT            &kp RGUI
+                                           &kp LCTL            &sr LSHIFT AL1           &kp RALT            &kp RGUI
         >;
         };
 
