@@ -147,7 +147,7 @@
         bindings = <
                     &kp STAR    &kp LS(N3)  &kp DLLR                       &kp LS(COMMA)   &kp LS(DOT)     &kp MINUS
         &kp BSLH   &kp GRAVE    &kp TILDE   &kp CARET                      &kp LBKT        &kp RBKT        &kp PIPE    &kp SLASH
-                                &trans      &sr LSHIFT AL1                 &kp LALT        &kp RGUI
+                                &trans      &sr LSHIFT AL1                 &kp RALT        &kp RGUI
         >;
         };
         sym2 {
@@ -155,7 +155,7 @@
         bindings = <
                     &kp ATSN    &kp QMARK        &kp RA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
         &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
-                                &trans          &sr LSHIFT AL1             &kp LALT    &kp RGUI
+                                &trans          &sr LSHIFT AL1             &kp RALT    &kp RGUI
 
         >;
         };
@@ -165,7 +165,7 @@
         bindings = <
                           &hm_l LCTL DOT      &hm_l LALT N0   &hm_l LGUI N1       &hm_r RGUI N2   &hm_r LALT N3    &hm_r RCTL N4
         &td SLASH MINUS   &td STAR PLUS       &kp N5          &kp N6              &kp N7          &kp N8           &kp N9         &td COLON EQUAL
-                                              &trans          &sr LSHIFT AL1      &kp LALT        &kp RGUI
+                                              &trans          &sr LSHIFT AL1      &kp RALT        &kp RGUI
         >;
         };
 
